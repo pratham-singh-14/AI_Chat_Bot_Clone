@@ -1,0 +1,38 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: chatbot
+  datasource:
+    url: ${SPRING_DATASOURCE_URL:jdbc:postgresql://localhost:5432/chatbot}
+    username: ${SPRING_DATASOURCE_USERNAME:postgres}
+    password: ${SPRING_DATASOURCE_PASSWORD:3599162}
+
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+  ai:
+    openai:
+      api-key: ${OPENAI_API_KEY:mock-key}
+      chat:
+        options:
+          model: ${OPENAI_CHAT_MODEL:gpt-4o}
+      embedding:
+        options:
+          model: ${OPENAI_EMBEDDING_MODEL:text-embedding-3-small}
+      image:
+        options:
+          model: ${OPENAI_IMAGE_MODEL:dall-e-3}
+      audio:
+        transcription:
+          options:
+            model: ${OPENAI_AUDIO_MODEL:whisper-1}
+        speech:
+          options:
+            model: ${OPENAI_TTS_MODEL:tts-1}

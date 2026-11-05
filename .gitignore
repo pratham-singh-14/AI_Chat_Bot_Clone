@@ -1,0 +1,44 @@
+# Environment & secrets
+.env
+*.env
+!.env.example
+AI_HANDOFF.md
+INTERVIEW_NOTES.md
+
+# Java / Maven build outputs
+target/
+**/target/
+*.class
+*.jar
+*.war
+
+# PDF & Vector runtime storage
+chatbot/data/
+data/pdfs/
+data/vectors/
+
+# Flutter / Dart build outputs
+.dart_tool/
+**/.dart_tool/
+.pub-cache/
+.pub/
+build/
+**/build/
+.flutter-plugins
+.flutter-plugins-dependencies
+
+# Android build outputs & local config
+.gradle/
+**/.gradle/
+local.properties
+**/local.properties
+*.keystore
+*.jks
+
+# IDE & OS
+.idea/
+**/.idea/
+.vscode/
+*.iml
+.DS_Store
+Thumbs.db
